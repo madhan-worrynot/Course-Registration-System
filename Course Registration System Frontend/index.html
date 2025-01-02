@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Course Registration System</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        h2 {
+            margin-top: 20px;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Button styling */
+        button {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 20px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Link styling */
+        a {
+            text-decoration: none;
+        }
+
+        /* Button container for better alignment */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #f0f0f0;
+        }
+
+        footer a {
+            color: #ffdd99;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2em;
+            }
+
+            button {
+                padding: 10px 30px;
+                font-size: 1em;
+            }
+
+            .button-container {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Course Registration System</h2>
+    <div class="button-container">
+        <a href="register.html"><button>Register a Course</button></a>
+        <a href="availcourses.html"><button>Available Courses</button></a>
+        <a href="enrolled.html"><button>Enrolled Students</button></a>
+    </div>
+    <footer>
+        <p>Designed by <a href="#">Madhan S</a>. All rights reserved &copy; 2024</p>
+    </footer>
+</body>
+</html>

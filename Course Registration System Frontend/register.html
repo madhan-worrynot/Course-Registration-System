@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>Register a Course </title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form container styling */
+        form {
+            background: linear-gradient(135deg, #1c1c3c, #292952);
+            padding: 30px 20px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        /* Form labels */
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            color: #e8eaf6;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* Input and select styling */
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 1em;
+            background-color: #394867;
+            color: #ffffff;
+            transition: all 0.3s ease-in-out;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        input::placeholder {
+            color: #b0bec5;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border: 2px solid #4caf50;
+            background-color: #2e3a59;
+            transform: scale(1.02);
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 15px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #357a38, #66bb6a);
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #fdd835;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 500px) {
+            form {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Register for an Exciting Course</h1>
+
+    <form action="http://localhost:8080/courses/register" method="post">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" name="name" id="name" placeholder="Your Full Name" required>
+
+        <label for="email">Enter Your Email ID:</label>
+        <input type="email" name="emailId" id="email" placeholder="Your Email Address" required>
+
+        <label for="course">Choose a Course:</label>
+        <select id="course" name="courseName" required>
+            <option value="" disabled selected>Select a Course</option>
+            <option value="Java Essentials">Java Essentials</option>
+            <option value="Python for ML">Python for ML</option>
+            <option value="Spring Boot">Spring Boot</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
